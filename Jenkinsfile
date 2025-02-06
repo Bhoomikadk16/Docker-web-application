@@ -29,13 +29,13 @@ pipeline {
         }
         stage('Assign tag'){
             steps{
-                sh 'docker tag app bhoomika720/jenkins'
+                sh 'docker tag app bhoomika720/project'
             }
         }
         stage('Push to dockerhub'){
             steps{
                 sh 'echo "dockeraccount" | docker login -u "bhoomika720" --password-stdin'
-                sh 'docker push bhoomika720/jenkins'
+                sh 'docker push bhoomika720/project'
             }
         }
         stage('Remove images'){
@@ -45,12 +45,12 @@ pipeline {
         }
         stage('Pull image from DockerHub'){
             steps{
-                sh 'docker pull bhoomika720/jenkins'
+                sh 'docker pull bhoomika720/project'
             }
         }
         stage('Run a container'){
             steps{
-                sh 'docker run -it -d --name web -p 8081:8080 bhoomika720/jenkins'
+                sh 'docker run -it -d --name web -p 8081:8080 bhoomika720/project'
             }
         }
     }
