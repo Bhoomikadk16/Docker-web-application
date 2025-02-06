@@ -1,0 +1,158 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #f4f4f4;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 1.5rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #555;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #393044;
+    color: white;
+    transform: scale(1.1);
+}
+
+
+#banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/main.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 5rem 0;
+}
+
+#banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+
+section {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #3498db;
+}
+
+#about p, #contact .contact-details p {
+    max-width: 700px;
+    margin: 0 auto 1rem;
+    line-height: 1.6;
+    text-align: justify;
+    padding: 0 2rem;
+}
+
+#tourist-places .places-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.place {
+    display: flex;
+    margin-bottom: 3rem;
+    width: 80%;
+    max-width: 900px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.place.zigzag-right {
+    flex-direction: row;
+}
+
+.place.zigzag-left {
+    flex-direction: row-reverse;
+}
+
+.place img {
+    width: 40%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease, skew 0.5s ease;
+}
+
+.place:hover img {
+    transform: scale(1.1);
+    transform: skewX(10deg);
+}
+
+
+.place-info {
+    padding: 2rem;
+    text-align: left;
+}
+
+.place-info h3 {
+    margin-top: 0;
+    color: #3498db;
+}
+
+#contact .contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact .contact-details img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
